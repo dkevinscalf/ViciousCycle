@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>410734db-5597-4224-86a2-28a754c3568f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Simulator.py</StartupFile>
+    <StartupFile>ViciousCycle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -20,7 +20,7 @@
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <CommandLineArguments>SlowMobius-N.rtn</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
-    <InterpreterId>{c873bc8e-3b18-4210-a172-ff8370c08caa}</InterpreterId>
+    <InterpreterId>{15a21c51-9fc6-4159-895c-86ef1826af48}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -50,12 +50,13 @@
   <ItemGroup>
     <Content Include="BikeConfig.txt" />
     <Content Include="BikeData_2.txt" />
+    <Content Include="SlowMobius-N.rtn" />
     <Content Include="SlowMobius-O.rtn" />
     <Content Include="SlowMobius.rtn" />
     <Content Include="TestRoutine.rtn" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="{c873bc8e-3b18-4210-a172-ff8370c08caa}\3.5" />
+    <InterpreterReference Include="{15a21c51-9fc6-4159-895c-86ef1826af48}\3.5" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

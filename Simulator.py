@@ -3,7 +3,7 @@ import CyclingRider
 
 riderList = []
 
-dummyPacket = "020106130038R2R14605P2P10D0004270100GR"
+dummyPacket = "020106130038R1R24605P1P20D0004270100GR"
 
 with open('BikeConfig.txt', 'rt') as csvfile:
     for line in csvfile.readlines():
@@ -39,7 +39,7 @@ def _tosmallhex(int_value):
     return format(int_value, '#04x').replace("0x","")
 
 while True:
-    file = open("BikeData_2.txt","w")
+    file = open("BikeData.txt","w")
 
     for rider in riderList:
         rider.Simulate()

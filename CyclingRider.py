@@ -11,6 +11,8 @@ class CRider:
     NameLabel = None
     RPMLabel = None
     WattLabel = None
+    PowerSecondsOdometer = 0
+    PowerSecondsTrip = 0
 
     def __init__(self, name, rpm, gear, power, targetpower, bikeid):
         self.RiderName = name
@@ -32,8 +34,8 @@ class CRider:
         self.WattLabel.configure(fg= fgColor)
 
     def Simulate(self):
-        self.Power += random.randrange(-4,5)
-        self.RPM += random.randrange(-1,2)
+        self.Power = random.randrange(0,200)
+        self.RPM = random.randrange(50,120)
 
     def ParseFromBikeData(self, data):
         rpmHex = data[14:16] + data[12:14]
@@ -46,5 +48,9 @@ class CRider:
 
         gearHex = data[36:38]
         self.Gear = int(gearHex,16)
+
+    def runOdometer(self, deltaTime):
+        self.PowerSecondsOdometer += self.Power*deltaTime
+        self.PowerSecondsTrip += self.Power*deltaTime
 
 

@@ -29,6 +29,8 @@ class FullScreenApp(object):
 
 #Global Vars
 startTime = datetime.datetime.now()
+masterDeltaTime = 0
+lastTickTime = datetime.datetime.now()
 deltaTime = 0
 seconds = 0
 remainingDuration = 0
@@ -44,9 +46,20 @@ pulseOnTimer = 0
 pulseOnCooldown = 10
 currentRPM = 0
 
+#race vars
+racingTime = -10
+racingWindow = None
+racingFrame = None
+racingLabel = None
+racingTitleLabel = None
+racingBars = []
+racingWinner = None
+
 leaderBoardFrame = None
 rpmImgL = None
 wattImgL = None
+
+
 
 #Read Activity From File
 segmentList = []
@@ -93,17 +106,27 @@ for segment in r.Segments:
 #Main Time Loop
 def counter_label(label):
   def count():
-    global deltaTime, seconds, remainingDuration, eventList, timeMultiplier
+    global masterDeltaTime, deltaTime, lastTickTime, seconds, remainingDuration, eventList, timeMultiplier, racingTime
 
-    deltaTime = datetime.datetime.now() - startTime
+    masterDeltaTime = datetime.datetime.now() - startTime
+    deltaTime = datetime.datetime.now() - lastTickTime
+    lastTickTime = datetime.datetime.now()
 
-    #pulseRPM(deltaTime.seconds)
+    #pulseRPM(masterDeltaTime.seconds)
 
-    seconds = int(deltaTime.seconds) * timeMultiplier
+    seconds = int(masterDeltaTime.seconds) * timeMultiplier
 
     updateLeaderBoard()
 
+    for rider in riderList:
+        rider.runOdometer(deltaTime.total_seconds())
+
     displayDuration = remainingDuration - seconds
+
+    if racingTime > -5:
+        runRace(deltaTime.total_seconds());
+    elif racingWindow != None:
+        racingWindow.destroy();
 
     label.config(text=getTime(seconds))
     durationLabel.config(text=getTime(displayDuration))
@@ -127,7 +150,7 @@ def getRiderInput(leaderboardFrame):
   def readRiderData():
     global riderList
 
-    with open('BikeData_1.txt', 'rt') as csvfile:
+    with open('BikeData.txt', 'rt') as csvfile:
         for line in csvfile.readlines():
            if len(line) > 1:
                lineParts = line.split(',')
@@ -141,6 +164,60 @@ def getRiderInput(leaderboardFrame):
     leaderboardFrame.after(500, readRiderData)
   #simulateRiders()
   readRiderData()
+
+def createRaceWindow():
+    global racingWindow, racingFrame, racingLabel, racingBar, riderList, racingTitleLabel
+    racingWindow = Toplevel()    
+    racingFrame = tk.Frame(racingWindow, width=1200, height=600, bg='black')    
+    racingFrame.pack()
+    
+    racingFrame.grid_columnconfigure(0, weight=1)
+    racingFrame.grid_columnconfigure(1, weight=1)
+    racingFrame.grid_rowconfigure(0, weight=1)
+    racingTitleLabel = tk.Label(racingFrame, text="RACE", fg='White', bg='black', font = "Helvetica 36 bold")
+    racingTitleLabel.grid(column=1, row=0, sticky="nsew")
+    i = 1
+    for rider in riderList:
+        racingFrame.grid_rowconfigure(i, weight=1)
+        racingLane = tk.Frame(racingFrame, width=1000, bg='black', padx=10, pady=10)
+        racingLane.grid(column=1, row=i, sticky="nsew")
+        racingBar = tk.Label(racingLane, bg="bisque", width=100, height=10)
+        racingBar.pack(side= LEFT)
+        racingBars.append(racingBar)
+        racingRiderLabel = tk.Label(racingFrame, text=rider.RiderName, fg='White', bg='black', font = "Helvetica 36 bold")
+        racingRiderLabel.grid(column=0, row=i, sticky="nsew")
+        i = i + 1
+
+def runRace(seconds):
+    global racingTime, racingFrame, racingLabel, racingWindow, riderList, racingBars, racingTitleLabel, racingWinner
+    if racingWindow == None:
+        return
+    racingTime-=seconds
+    racingText = ""
+    if racingTime < 1:
+        if racingWinner == None:
+            currentWinner = 0;
+            for rider in riderList:
+                if rider.PowerSecondsTrip > currentWinner:
+                    currentWinner = rider.PowerSecondsTrip
+                    racingWinner = "Finish! " + rider.RiderName + " Wins!"
+                    print(racingWinner)
+        racingTitleLabel.configure(text=racingWinner)
+    if racingTime >= 0:
+        i = 0
+        racingTitleLabel.configure(text="RACE " + str(int(racingTime)))
+        maxPowerTrip = getMaxPowerTrip(riderList)
+        for rider in riderList:            
+            racingBars[i].configure(width=int(rider.PowerSecondsTrip / maxPowerTrip * 100))
+            i = i+1
+    
+
+def getMaxPowerTrip(riderList):
+    powerTrip = 0
+    for rider in riderList:
+        if rider.PowerSecondsTrip > powerTrip:
+            powerTrip = rider.PowerSecondsTrip
+    return powerTrip
 
 def eventControl(seconds):
     global segmentList
@@ -161,6 +238,8 @@ def doAction(event, title):
         showImage(event.actionParams)
     if event.actionType == CyclingRoutine.CEventType.TEXT:
         showText(event.actionParams)
+    if event.actionType == CyclingRoutine.CEventType.RACE:
+        startRace(event.actionParams)
     event.fired = True
 
 def setActivity(params):
@@ -235,6 +314,13 @@ def showImage(path):
     contentImg = PhotoImage(file=path)
     contentLabel.config(image=contentImg)
 
+def startRace(path):
+    global racingTime
+    createRaceWindow()
+    racingTime = float(path)
+    for rider in riderList:
+        rider.PowerSecondsTrip = 0
+
 def showTitle(title):
     global titleLabel
     titleLabel.config(text=title)
@@ -242,6 +328,8 @@ def showTitle(title):
 def showText(displayText):
     global contentText
     contentText.config(text=displayText)
+
+
 
 def getTime(seconds):
     minutes = seconds // 60
@@ -261,16 +349,16 @@ def getRiderLabel(iconImage, parent):
     label.configure(font= "Helvetica 30 bold")
     return label
 
-def pulseRPM(deltaTime):
+def pulseRPM(masterDeltaTime):
     global currentRPM, pulseOffTimer, pulseOnTimer, pulseOnCooldown, rpmLabel, pulseOffImg, pulseOnImg
     rpmVal = int(currentRPM)
     if rpmVal == 0:
         return
     period = 60 / rpmVal
-    if deltaTime > pulseOffTimer:
+    if masterDeltaTime > pulseOffTimer:
         pulseOffTimer = pulseOffTimer + period
-        pulseOnTimer = deltaTime + 0.2
-    if deltaTime > pulseOnTimer:
+        pulseOnTimer = masterDeltaTime + 0.2
+    if masterDeltaTime > pulseOnTimer:
         rpmLabel.config(bd=15)
     else:
         rpmLabel.config(bd=5)
@@ -351,8 +439,8 @@ leaderBoardFrame.grid_rowconfigure(7, weight=1)
 leaderBoardFrame.grid_rowconfigure(8, weight=1)
 colorWidgets.append(leaderBoardFrame)
 
-imageFrame = tk.Frame(bottomFrame, bg="blue")
-imageFrame.pack(fill=Y, expand=True, side=LEFT)
+imageFrame = tk.Frame(bottomFrame, bg="black")
+imageFrame.pack(fill=BOTH, expand=True, side=LEFT)
 colorWidgets.append(imageFrame)
 
 titleLabel = tk.Label(titleFrame, fg='White', bg='Blue', font = "Helvetica 48 bold", padx = 20, pady = 20, anchor = W, text='Test Layout')
@@ -415,6 +503,8 @@ contentText = tk.Label(textFrame, fg='White', bg='blue', font = "Helvetica 30 bo
 contentText.pack(fill=BOTH, expand=True)
 colorWidgets.append(contentText)
 
+
+
 createLeaderBoard()
 
 for control, lightImage, darkImage in colorImages:
@@ -423,5 +513,7 @@ for control, lightImage, darkImage in colorImages:
 counter_label(timer)
 
 getRiderInput(leaderBoardFrame)
+
+
 
 root.mainloop()

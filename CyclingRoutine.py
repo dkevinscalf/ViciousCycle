@@ -6,7 +6,8 @@ class CEventType(Enum):
     ACTIVITY = 1,
     MUSIC = 2,
     IMAGE = 3,
-    TEXT = 4
+    TEXT = 4,
+    RACE = 5
 
 class CEvent:
     time = 0
@@ -32,5 +33,7 @@ def ConvertIntToEventType(type):
             return CEventType.IMAGE
     if type == 4:
         return CEventType.TEXT
+    if type == 5:
+        return CEventType.RACE
 
 
