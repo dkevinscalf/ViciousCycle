@@ -1,0 +1,442 @@
+{
+	"Segments": [
+		{
+			"GlobalStartTime": 0,
+			"Name": "Slow Mobius",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/slowMobius.wav"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/Slowmobius.gif"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 8,
+			"Name": "Warm the Fugg Up",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/JUSTICE - ALAKAZAM ! (Official Audio).mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,50,False,49"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Start out focusing on getting 100 RPMs at a low resistance"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM1.gif"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,60,False,50"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Raise your resistance until you hit the right watt%"
+				},
+				{
+				  "Time": 100,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,50"
+				},
+				{
+				  "Time": 150,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,95,False,30"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,50,False,50"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Back it down for a minute"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM2.gif"
+				},
+				{
+				  "Time": 230,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,50"
+				},
+				{
+				  "Time": 230,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Now crank that shit back up!"
+				},
+				{
+				  "Time": 280,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,110,False,30"
+				},
+				{
+				  "Time": 280,
+				  "ActionType": "TEXT",
+				  "ActionParams": "RED ZONE GRIT IT OUT JUST A BIT LONGER"
+				}
+			]
+		},
+    {
+      "GlobalStartTime": 318,
+      "Name": "Sustain",
+      "Events": [
+        {
+          "Time": 0,
+          "ActionType": "MUSIC",
+          "ActionParams": "Music/-Nobody Speak- feat. Run The Jewels - DJ Shadow (The Mountain Will Fall) [HQ Audio].mp3"
+        },
+        {
+          "Time": 0,
+          "ActionType": "ACTIVITY",
+          "ActionParams": "Start,80,80,False,180"
+        },
+        {
+          "Time": 0,
+          "ActionType": "TEXT",
+          "ActionParams": "Hold this medium intensity for 3 minutes"
+        },
+        {
+          "Time": 0,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/RM3.gif"
+        }
+      ]
+    },
+    {
+      "GlobalStartTime": 498,
+      "Name": "JUMPS",
+      "Events": [
+        {
+          "Time": 0,
+          "ActionType": "MUSIC",
+          "ActionParams": "Music/The Chemical Brothers - Go.mp3"
+        },
+        {
+          "Time": 0,
+          "ActionType": "ACTIVITY",
+          "ActionParams": "Start,90,60,False,220"
+        },
+        {
+          "Time": 0,
+          "ActionType": "TEXT",
+          "ActionParams": "Jumps are comin strong, with when real.. turbulent juice is comin.."
+        },
+        {
+          "Time": 0,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/RM4.gif"
+        },
+        {
+          "Time": 60,
+          "ActionType": "TEXT",
+          "ActionParams": "GET READY"
+        },
+        {
+          "Time": 66,
+          "ActionType": "TEXT",
+          "ActionParams": "JUMP"
+        },
+        {
+          "Time": 66,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 68,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 70,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 72,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 74,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 76,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 78,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 80,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 86,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/RM4.gif"
+        },
+        {
+          "Time": 86,
+          "ActionType": "TEXT",
+          "ActionParams": "Little Break.."
+        },
+        {
+          "Time": 116,
+          "ActionType": "TEXT",
+          "ActionParams": "GET READY"
+        },
+        {
+          "Time": 120,
+          "ActionType": "TEXT",
+          "ActionParams": "JUMP"
+        },
+        {
+          "Time": 122,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 124,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 126,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 128,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 130,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 132,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 134,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpup.gif"
+        },
+        {
+          "Time": 136,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/jumpdown.gif"
+        },
+        {
+          "Time": 140,
+          "ActionType": "IMAGE",
+          "ActionParams": "images/RM4.gif"
+        }
+      ]
+    },
+    {
+			"GlobalStartTime": 718,
+			"Name": "ROLLERS",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/Jax Jones - You Don't Know Me ft. RAYE.mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,70,False,54"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Easy Descents Interspersed with Hills"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM5.gif"
+				},
+				{
+				  "Time": 55,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,100,True,30"
+				},
+				{
+				  "Time": 85,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,70,False,47"
+				},
+				{
+				  "Time": 132,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,100,True,30"
+				},
+				{
+				  "Time": 162,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,70,False,39"
+				},
+				{
+				  "Time": 201,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,100,True,30"
+				},
+				{
+				  "Time": 231,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,62,70,False,9"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 958,
+			"Name": "HILL CLIMB",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/Kungs vs Cookin On 3 Burners - This Girl [Original Mix].mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,61,50,False,39"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Gradually increase your resistance"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM6.gif"
+				},
+				{
+				  "Time": 40,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,61,65,False,55"
+				},
+				{
+				  "Time": 95,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,61,80,False,45"
+				},
+				{
+				  "Time": 140,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,61,90,False,45"
+				},
+				{
+				  "Time": 185,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,61,100,False,45"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 1188,
+			"Name": "ADVENTURE ROLLERS",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/[Electro] Nitro Fun - Cheat Codes [Monstercat Release].mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "CHEAT CODES LOCKED!!"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM7.gif"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,74"
+				},
+				{
+				  "Time": 75,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,64,100,True,30"
+				},
+				{
+				  "Time": 105,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,45"
+				},
+				{
+				  "Time": 165,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,64,100,True,30"
+				},
+				{
+				  "Time": 195,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,15"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 1398,
+			"Name": "SUSTAND",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/The Americanos - BlackOut (Lyric Video) ft. Lil Jon, Juicy J, Tyga.mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "PUT YOUR HANDS IN THE URR LET ME KNOW YOU OUT THURR"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM8.gif"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,64,90,True,210"
+				}
+			]
+		}
+	]
+}

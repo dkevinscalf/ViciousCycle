@@ -1,0 +1,127 @@
+{
+	"Segments": [
+		{
+			"GlobalStartTime": 0,
+			"Name": "Slow Mobius",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/slowMobius.wav"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/Slowmobius.gif"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 8,
+			"Name": "Warm the Fugg Up",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/JUSTICE - ALAKAZAM ! (Official Audio).mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,50,False,49"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Start out focusing on getting 100 RPMs at a low resistance"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM1.gif"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,60,False,50"
+				},
+				{
+				  "Time": 50,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Raise your resistance until you hit the right watt%"
+				},
+				{
+				  "Time": 100,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,50"
+				},
+				{
+				  "Time": 150,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,95,False,30"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,50,False,50"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Back it down for a minute"
+				},
+				{
+				  "Time": 180,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM2.gif"
+				},
+				{
+				  "Time": 230,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,80,False,50"
+				},
+				{
+				  "Time": 230,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Now crank that shit back up!"
+				},
+				{
+				  "Time": 280,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,100,110,False,30"
+				},
+				{
+				  "Time": 280,
+				  "ActionType": "TEXT",
+				  "ActionParams": "RED ZONE GRIT IT OUT JUST A BIT LONGER"
+				}
+			]
+		},
+		{
+			"GlobalStartTime": 318,
+			"Name": "Sustain",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "Music/-Nobody Speak- feat. Run The Jewels - DJ Shadow (The Mountain Will Fall) [HQ Audio].mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,80,80,False,180"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Hold this medium intensity for 3 minutes"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "images/RM3.gif"
+				}
+			]
+		}
+	]
+}

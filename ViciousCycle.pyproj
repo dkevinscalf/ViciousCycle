@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>410734db-5597-4224-86a2-28a754c3568f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Simulator.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ViciousCycle</Name>
+    <RootNamespace>ViciousCycle</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>SlowMobius-N.rtn</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <InterpreterId>{c873bc8e-3b18-4210-a172-ff8370c08caa}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CyclingActivity.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CyclingRoutine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CyclingRider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParserTest.py" />
+    <Compile Include="Simulator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViciousCycle.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BikeConfig.txt" />
+    <Content Include="BikeData_2.txt" />
+    <Content Include="SlowMobius-O.rtn" />
+    <Content Include="SlowMobius.rtn" />
+    <Content Include="TestRoutine.rtn" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{c873bc8e-3b18-4210-a172-ff8370c08caa}\3.5" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

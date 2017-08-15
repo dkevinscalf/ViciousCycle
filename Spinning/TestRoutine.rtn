@@ -1,0 +1,145 @@
+{
+	"Segments": [
+		{
+			"GlobalStartTime": 0,
+			"Name": "JUMPS",
+			"Events": [
+				{
+				  "Time": 0,
+				  "ActionType": "MUSIC",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/Music/The Chemical Brothers - Go.mp3"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "ACTIVITY",
+				  "ActionParams": "Start,90,60,False,220"
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Jumps are comin strong, with when real.. turbulent juice is comin.."
+				},
+				{
+				  "Time": 0,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/RM4.gif"
+				},
+				{
+				  "Time": 60,
+				  "ActionType": "TEXT",
+				  "ActionParams": "GET READY"
+				},
+				{
+				  "Time": 66,
+				  "ActionType": "TEXT",
+				  "ActionParams": "JUMP"
+				},
+				{
+				  "Time": 66,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 68,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 70,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 72,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 74,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 76,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 78,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 80,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 86,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/RM4.gif"
+				},
+				{
+				  "Time": 86,
+				  "ActionType": "TEXT",
+				  "ActionParams": "Little Break.."
+				},
+				{
+				  "Time": 116,
+				  "ActionType": "TEXT",
+				  "ActionParams": "GET READY"
+				},
+				{
+				  "Time": 120,
+				  "ActionType": "TEXT",
+				  "ActionParams": "JUMP"
+				},
+				{
+				  "Time": 122,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 124,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 126,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 128,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 130,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 132,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 134,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpup.gif"
+				},
+				{
+				  "Time": 136,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/jumpdown.gif"
+				},
+				{
+				  "Time": 140,
+				  "ActionType": "IMAGE",
+				  "ActionParams": "C:/Users/Kevin/Documents/visual studio 2015/Projects/ViciousCycle/images/RM4.gif"
+				}
+			]
+		}
+	]
+}
