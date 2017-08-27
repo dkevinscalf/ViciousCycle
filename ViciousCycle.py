@@ -166,10 +166,13 @@ def getRiderInput(leaderboardFrame):
   readRiderData()
 
 def createRaceWindow():
-    global racingWindow, racingFrame, racingLabel, racingBar, riderList, racingTitleLabel
+    global racingWindow, racingFrame, racingLabel, racingBar, racingBars, riderList, racingTitleLabel
+    racingBars = []
+
     racingWindow = Toplevel()    
     racingFrame = tk.Frame(racingWindow, width=1200, height=600, bg='black')    
     racingFrame.pack()
+
     
     racingFrame.grid_columnconfigure(0, weight=1)
     racingFrame.grid_columnconfigure(1, weight=1)
@@ -181,33 +184,33 @@ def createRaceWindow():
         racingFrame.grid_rowconfigure(i, weight=1)
         racingLane = tk.Frame(racingFrame, width=1000, bg='black', padx=10, pady=10)
         racingLane.grid(column=1, row=i, sticky="nsew")
-        racingBar = tk.Label(racingLane, bg="bisque", width=100, height=10)
+        racingBar = tk.Label(racingLane, bg="greenyellow", width=100, height=10)
         racingBar.pack(side= LEFT)
         racingBars.append(racingBar)
         racingRiderLabel = tk.Label(racingFrame, text=rider.RiderName, fg='White', bg='black', font = "Helvetica 36 bold")
         racingRiderLabel.grid(column=0, row=i, sticky="nsew")
         i = i + 1
 
-def runRace(seconds):
+def runRace(seconds):    
     global racingTime, racingFrame, racingLabel, racingWindow, riderList, racingBars, racingTitleLabel, racingWinner
+
     if racingWindow == None:
         return
     racingTime-=seconds
     racingText = ""
     if racingTime < 1:
         if racingWinner == None:
-            currentWinner = 0;
+            currentWinner = 0
             for rider in riderList:
                 if rider.PowerSecondsTrip > currentWinner:
                     currentWinner = rider.PowerSecondsTrip
                     racingWinner = "Finish! " + rider.RiderName + " Wins!"
-                    print(racingWinner)
         racingTitleLabel.configure(text=racingWinner)
-    if racingTime >= 0:
+    elif racingTime >= 0:
         i = 0
         racingTitleLabel.configure(text="RACE " + str(int(racingTime)))
         maxPowerTrip = getMaxPowerTrip(riderList)
-        for rider in riderList:            
+        for rider in riderList:    
             racingBars[i].configure(width=int(rider.PowerSecondsTrip / maxPowerTrip * 100))
             i = i+1
     
@@ -315,11 +318,12 @@ def showImage(path):
     contentLabel.config(image=contentImg)
 
 def startRace(path):
-    global racingTime
-    createRaceWindow()
+    global racingTime, racingWinner    
+    racingWinner = None
     racingTime = float(path)
     for rider in riderList:
         rider.PowerSecondsTrip = 0
+    createRaceWindow()    
 
 def showTitle(title):
     global titleLabel

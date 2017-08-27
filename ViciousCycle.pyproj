@@ -18,7 +18,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <IsWindowsApplication>False</IsWindowsApplication>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>SlowMobius-N.rtn</CommandLineArguments>
+    <CommandLineArguments>TestRoutine.rtn</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
     <InterpreterId>{15a21c51-9fc6-4159-895c-86ef1826af48}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
